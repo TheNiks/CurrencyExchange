@@ -22,16 +22,22 @@ Currency app is designed to helps customers to hand different currency conversio
 - Used MVVM design pattern.
 
 ## Screens
-- Currency Exchange 
+
+- Currency Exchange
+
 ![Home](https://github.com/TheNiks/CurrencyExchange/blob/8e5d45419ffdf5679b7c0ffa5841e80dab38015d/CurrencyExchangeHome.png)
 
 - Currency Exchange with dropdown and keyboard
+
 ![Dropdown](https://github.com/TheNiks/CurrencyExchange/blob/8e5d45419ffdf5679b7c0ffa5841e80dab38015d/CurrencyExchangeHomeWithDropDown.png)
 ![Keyboard](https://github.com/TheNiks/CurrencyExchange/blob/8e5d45419ffdf5679b7c0ffa5841e80dab38015d/CurrencyExchangeHomeKey.png)
 
 - Currency Exchange detail with graph
+
 ![Detail](https://github.com/TheNiks/CurrencyExchange/blob/8e5d45419ffdf5679b7c0ffa5841e80dab38015d/CurrencyExchangeDetail.png)
 
 ## Tests
+
 - Added Unit using XCTest.
+- 
 ![UnitTestCoverage](https://github.com/TheNiks/CurrencyExchange/blob/8e5d45419ffdf5679b7c0ffa5841e80dab38015d/UnitTestCoverage.png)
