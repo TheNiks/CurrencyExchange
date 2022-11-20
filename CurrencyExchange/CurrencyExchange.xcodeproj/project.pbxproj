@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D41D4DC2929E39800FD025C /* CurrencyExchangeDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D4DA2929E39800FD025C /* CurrencyExchangeDetailsViewModelTests.swift */; };
+		9D41D4DD2929E39800FD025C /* CurrencyExchangeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D4DB2929E39800FD025C /* CurrencyExchangeViewModelTest.swift */; };
+		9D41D4E12929EF2400FD025C /* Highcharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D41D4E02929EF2400FD025C /* Highcharts.xcframework */; };
 		9D709A3E92AF84524421F588 /* Pods_CurrencyExchange_CurrencyExchangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED1C8D4B76D7CEB8140D9B4 /* Pods_CurrencyExchange_CurrencyExchangeUITests.framework */; };
 		9D73F9D42928106F007C70C8 /* NetworkServiceManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73F9D32928106F007C70C8 /* NetworkServiceManger.swift */; };
 		9D73F9D72928115B007C70C8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73F9D62928115B007C70C8 /* StringExtension.swift */; };
@@ -69,6 +72,9 @@
 		52B5D0CE7E5E10756DDAC947 /* Pods-CurrencyExchange-CurrencyExchangeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyExchange-CurrencyExchangeUITests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyExchange-CurrencyExchangeUITests/Pods-CurrencyExchange-CurrencyExchangeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D965DD0B62FC504034D560A /* Pods-CurrencyExchange-CurrencyExchangeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyExchange-CurrencyExchangeUITests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyExchange-CurrencyExchangeUITests/Pods-CurrencyExchange-CurrencyExchangeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E14C41C7420F7C9DEAD8E69 /* Pods_CurrencyExchangeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyExchangeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D41D4DA2929E39800FD025C /* CurrencyExchangeDetailsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		9D41D4DB2929E39800FD025C /* CurrencyExchangeViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeViewModelTest.swift; sourceTree = "<group>"; };
+		9D41D4E02929EF2400FD025C /* Highcharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Highcharts.xcframework; sourceTree = "<group>"; };
 		9D73F9D32928106F007C70C8 /* NetworkServiceManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceManger.swift; sourceTree = "<group>"; };
 		9D73F9D62928115B007C70C8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		9DE7FCFA2928896100F5B4DE /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D41D4E12929EF2400FD025C /* Highcharts.xcframework in Frameworks */,
 				EB2DF7125C00EDAB39B53828 /* Pods_CurrencyExchange.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +148,7 @@
 		84F5CE373914B699E89A1EFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D41D4E02929EF2400FD025C /* Highcharts.xcframework */,
 				5291552DFBC9BEEA7B206E3B /* Pods_CurrencyExchange.framework */,
 				FED1C8D4B76D7CEB8140D9B4 /* Pods_CurrencyExchange_CurrencyExchangeUITests.framework */,
 				8E14C41C7420F7C9DEAD8E69 /* Pods_CurrencyExchangeTests.framework */,
@@ -241,6 +249,8 @@
 		9DEC920E2927EF7F0088DE78 /* CurrencyExchangeTests */ = {
 			isa = PBXGroup;
 			children = (
+				9D41D4DA2929E39800FD025C /* CurrencyExchangeDetailsViewModelTests.swift */,
+				9D41D4DB2929E39800FD025C /* CurrencyExchangeViewModelTest.swift */,
 				9DEC920F2927EF7F0088DE78 /* CurrencyExchangeTests.swift */,
 			);
 			path = CurrencyExchangeTests;
@@ -599,6 +609,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEC92102927EF7F0088DE78 /* CurrencyExchangeTests.swift in Sources */,
+				9D41D4DC2929E39800FD025C /* CurrencyExchangeDetailsViewModelTests.swift in Sources */,
+				9D41D4DD2929E39800FD025C /* CurrencyExchangeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

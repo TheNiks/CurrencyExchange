@@ -9,12 +9,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Charts
+import Highcharts
 
 class CurrencyExchangeDetailsVC: MainViewController {
 
     @IBOutlet weak var historicalView: UIView!
     @IBOutlet weak var otherCurrencyView: UIView!
     @IBOutlet weak var innerView: UIView!
+    
+    @IBOutlet weak var chartBaseView: UIView!
+    var chartView: HIChartView!
     
     var fromCurrencyValue: String = StringConstants.emptyString
     var fromCurrencyCode: String = StringConstants.emptyString
@@ -72,6 +76,68 @@ class CurrencyExchangeDetailsVC: MainViewController {
                 self.parseNetworkError(error: error)
                 
             }).disposed(by: disposeBag)
+        
+        currencyExchangeDetailViewModel
+            .historicalDataModel
+            .observe(on: MainScheduler.instance)
+            .bind { model in
+                self.addChart(historicalData: model)
+            }
+            .disposed(by: disposeBag)
        
+    }
+}
+
+extension CurrencyExchangeDetailsVC {
+    func addChart(historicalData: [HistoricalDataModel]) {
+       chartView = HIChartView(frame: CGRect(x: chartBaseView.bounds.origin.x+10,
+                                                  y: chartBaseView.bounds.origin.y+10,
+                                                  width: chartBaseView.bounds.size.width-20,
+                                              height: chartBaseView.frame.height-20))
+        
+       let formateData = historicalData.map { [$0.dateString, Double($0.toCurrencyValue) ?? 0.0] }
+       let options = HIOptions()
+
+       let chart = HIChart()
+       chart.type = "column"
+       options.chart = chart
+
+       let exporting = HIExporting()
+       exporting.enabled = false
+       options.exporting = exporting
+
+       let title = HITitle()
+       title.text = "3 days Historical Data"
+       options.title = title
+
+       let xAxis = HIXAxis()
+       xAxis.type = "category"
+       xAxis.labels = HILabels()
+       xAxis.labels.rotation = -45
+       xAxis.labels.style = HICSSObject()
+       xAxis.labels.style.fontSize = "8px"
+       xAxis.labels.style.fontFamily = "Verdana, sans-serif"
+       options.xAxis = [xAxis]
+
+       let yAxis = HIYAxis()
+       yAxis.min = 0
+       yAxis.title = HITitle()
+       yAxis.title.text = "Currency Rate"
+       options.yAxis = [yAxis]
+
+       let legend = HILegend()
+       legend.enabled = false
+       options.legend = legend
+
+       let tooltip = HITooltip()
+       tooltip.pointFormat = "Currency Rate: <b>{point.y:.3f}</b>"
+       options.tooltip = tooltip
+
+       let historical = HIColumn()
+       historical.data = formateData as [Any]
+
+       options.series = [historical]
+       chartView.options = options
+       chartBaseView.addSubview(chartView)
     }
 }

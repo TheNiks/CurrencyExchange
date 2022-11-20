@@ -183,28 +183,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYN-ha-1mw">
+                                <rect key="frame" x="0.0" y="60" width="375" height="240"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.43921568630000002" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VX-Jh-Ea2">
-                                <rect key="frame" x="0.0" y="44" width="184" height="623"/>
+                                <rect key="frame" x="0.0" y="300" width="184" height="367"/>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAI-Vi-rFY">
-                                <rect key="frame" x="191.5" y="44" width="183.5" height="623"/>
+                                <rect key="frame" x="191.5" y="300" width="183.5" height="367"/>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VRV-BV-BS3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1VX-Jh-Ea2" secondAttribute="bottom" id="4ty-jI-fQW"/>
+                            <constraint firstAttribute="trailing" secondItem="GYN-ha-1mw" secondAttribute="trailing" id="361-OY-qhx"/>
+                            <constraint firstItem="yAI-Vi-rFY" firstAttribute="bottom" secondItem="VRV-BV-BS3" secondAttribute="bottom" id="8cG-4K-yWM"/>
                             <constraint firstAttribute="trailing" secondItem="yAI-Vi-rFY" secondAttribute="trailing" id="CjC-1f-j0u"/>
-                            <constraint firstAttribute="bottom" secondItem="yAI-Vi-rFY" secondAttribute="bottom" id="DMF-ut-5Pe"/>
                             <constraint firstItem="yAI-Vi-rFY" firstAttribute="width" secondItem="Y2v-6V-ywU" secondAttribute="width" multiplier="0.489333" id="H8f-4i-8JG"/>
+                            <constraint firstItem="1VX-Jh-Ea2" firstAttribute="top" secondItem="GYN-ha-1mw" secondAttribute="bottom" id="PAo-n1-G6o"/>
                             <constraint firstItem="1VX-Jh-Ea2" firstAttribute="leading" secondItem="Y2v-6V-ywU" secondAttribute="leading" id="XRv-5a-tnr"/>
+                            <constraint firstItem="yAI-Vi-rFY" firstAttribute="top" secondItem="GYN-ha-1mw" secondAttribute="bottom" id="XxD-52-YmL"/>
+                            <constraint firstItem="GYN-ha-1mw" firstAttribute="top" secondItem="Y2v-6V-ywU" secondAttribute="top" constant="60" id="axF-c4-HEv"/>
                             <constraint firstItem="1VX-Jh-Ea2" firstAttribute="width" secondItem="Y2v-6V-ywU" secondAttribute="width" multiplier="0.490667" id="e6W-yz-RSV"/>
-                            <constraint firstItem="1VX-Jh-Ea2" firstAttribute="top" secondItem="Y2v-6V-ywU" secondAttribute="top" constant="44" id="lih-Bi-WM3"/>
-                            <constraint firstItem="yAI-Vi-rFY" firstAttribute="top" secondItem="Y2v-6V-ywU" secondAttribute="top" constant="44" id="sgD-Wy-jnT"/>
+                            <constraint firstItem="GYN-ha-1mw" firstAttribute="height" secondItem="Y2v-6V-ywU" secondAttribute="height" multiplier="0.35982" id="qTc-KQ-08W"/>
+                            <constraint firstItem="1VX-Jh-Ea2" firstAttribute="bottom" secondItem="VRV-BV-BS3" secondAttribute="bottom" id="u5Z-rH-yFH"/>
+                            <constraint firstItem="GYN-ha-1mw" firstAttribute="leading" secondItem="Y2v-6V-ywU" secondAttribute="leading" id="uaR-wd-kSX"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="chartBaseView" destination="GYN-ha-1mw" id="RYc-4w-syQ"/>
                         <outlet property="historicalView" destination="1VX-Jh-Ea2" id="1BH-0H-UWS"/>
                         <outlet property="otherCurrencyView" destination="yAI-Vi-rFY" id="HWo-rf-vMl"/>
                     </connections>
