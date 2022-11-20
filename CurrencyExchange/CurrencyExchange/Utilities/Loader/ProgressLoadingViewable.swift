@@ -21,7 +21,7 @@ extension ProgressLoadingViewable where Self : MainViewController {
         view.bringSubviewToFront(animateLoading)
         animateLoading.restorationIdentifier = "loadingView"
         animateLoading.center = view.center
-        animateLoading.loadingViewMessage = NSLocalizedString("LOADING_MESSAGE", comment: "Loading Message")
+        animateLoading.loadingViewMessage = "LOADING_MESSAGE".localized(withComment: "Loading Message")
        
         animateLoading.clipsToBounds = true
         animateLoading.startAnimation()
